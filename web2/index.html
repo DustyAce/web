@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>wip</title>
+	<link href="default.css" rel="stylesheet" type="text/css"></link>
+    </head>
+    <body>
+        <header>
+		<p class="console">$ cat variant.txt author.txt</p>
+            Вариант 22615<br>
+            Author: Бондаренко Данил Сергеевич, P3217
+        </header>
+        <div class="main">
+		<div class="shapeGraph">
+			<p class="console">Graph.js</p>
+                	<canvas class="graph" , id="graph"></canvas>
+			<br>
+			<a id="startMCButton">> Start Monte-Carlo</a>
+                	<p id="estimationText">Estimate area of the shape by randomly shooting points at it</p>
+        	</div>
+
+		<div>
+            <form id="form" autocomplete="off" action="index.html">
+		    <p class="console">$ ./form.sh</p>
+                <p>
+                    <label for="x">Координата X $</label>
+                    <input
+                        type="text"
+                        id="xTextField"
+                        name="x"
+                        placeholder="Число в (-5.0 ; 3.0)"
+                        required="True"
+			maxlength="17"
+                    />
+                </p>
+                <p>
+                    <label for="y">Координата Y $</label>
+                    <input
+                        type="text"
+                        id="yTextField"
+                        name="y"
+                        placeholder="Число в (-5.0 ; 5.0)"
+                        required="True"
+			maxlength="17"
+                    />
+                </p>
+                <p>
+                    <label for="r">Радиус R $</label>
+                    <input
+                        type="text"
+                        id="rTextField"
+                        name="r"
+                        placeholder="Число в (1.0 ; 4.0)"
+                        required="True"
+			maxlength="17"
+                    />
+                </p>
+		<input type="submit" class="submit" value="> Проверить" />
+            </form>
+            <p class="err" id="errorMessage" hidden>hi</p>
+		</div><div>
+            <table id="resultTable">
+		    <p class="console">LocalStorage/resultHistory</p>
+                <tr>
+                    <th colspan="5">Результаты проверок</th>
+                </tr>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Попадание</th>
+                    <th>Дата</th>
+                </tr>
+            </table>
+	    </div>
+        </div>
+	<footer>
+	<a href="../index.html">Homepage</a>
+	</footer>
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
+
+

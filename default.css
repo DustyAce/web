@@ -1,0 +1,79 @@
+ 
+:root {
+    --major-background: #110011;
+    --minor-background: #FFFFFF20;
+    --accent-color:       #DD00FF;
+    --subaccent-color:      #FF00AA;
+    --bleak-color: 	#FF88EE;
+    --inactive-color:      #993355;
+}
+
+html, body {
+    background-color: var(--major-background);
+    color: var(--accent-color);
+    font: 16px Lucida Console, monospace;
+}
+
+div {
+        overflow: auto;
+}
+
+div.console {
+    background-color: var(--minor-background);
+    padding: 10px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 1em;
+}
+
+div.console p {
+    margin: 2px;
+    margin-left: 1em;
+}
+
+div.console p.system {
+    color: #FFFFFF50;
+    margin-left: 0em;
+}
+
+a {
+    color: var(--subaccent-color);
+}
+
+a:hover {
+	transition: 0.2s all;
+	color: var(--bleak-color);
+}
+
+div.console .todo {
+    color: var(--inactive-color);
+}
+
+#lefthalf {
+	float: left;
+	width: 35%;
+}
+
+#righthalf a, a:link, a:visited{
+	margin-right:1em;
+}
+
+
+
+#miki {
+        float: left;
+}
+
+#miki img {
+        padding-top: 0.5em
+}
+
+footer {
+	position:absolute;
+	bottom:0;
+	margin-bottom:0.5em;
+}
+
+footer a {
+    color: var(--subaccent-color);
+}

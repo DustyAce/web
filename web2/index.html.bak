@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>wip</title>
+	<link href="default.css" rel="stylesheet" type="text/css"></link>
+        <style>
+	    :root {
+		--major-background:	#092328;
+		--body-background:	#b7ccba;
+		--accent-color:		#12544f;
+		--selected-color:	#aaeeaa;
+		--error-color:		#dd1111;
+	    }
+            html,
+            body {
+                height: 100%;
+                font:
+                    16px Lucida Console,
+                    monospace;
+                color: var(--accent-color);
+                background-color: var(--major-background);
+            }
+            .header {
+                background-color: var(--accent-color);
+                font:
+                    20px Georgia,
+                    serif;
+                font-weight: bold;
+                color: var(--body-background);
+                text-align: right;
+                margin-bottom: 10px;
+                /* max-height: 59px; */
+            }
+            .main {
+                background-color: var(--body-background);
+                margin: 5px;
+                padding: 20px;
+                min-height: 95vh;
+                padding-left: 20px;
+            }
+	    div.shapeGraph {
+                float: right;
+                background-color: #FFFFFF50;
+                border-radius: 4px;
+                border: solid 4px;
+                padding: 8px;
+		max-width: 40%;
+		min-width: 30em;
+            }
+            canvas.graph {
+                background-color: white;
+                margin: 10px;
+                width: 30em;
+		max-width: 95%;
+                height: 30em;
+		max-height: 95%;
+                border: 3px solid var(--accent-color);
+                border-radius: 2px;
+            }
+            canvas#headerCanvas {
+                position: absolute 0 0;
+                float: left;
+                height: 59px;
+                width: 400px;
+            }
+            button {
+		font-size: 110%;
+                margin-left: 6px;
+                border-radius: 4px;
+		border-width: 2px;
+                min-width: 30px;
+                min-height: 30px;
+                transition: 0.2s all;
+                transform: scale(0.9);
+            }
+            button:hover {
+                transform: scale(0.99);
+            }
+            button:active {
+                transition:
+                    width 0.6s,
+                    height 0.4s;
+                transform: scale(0.8);
+            }
+            p.buttonSpace > button.btnActive {
+                border: 2px solid var(--accent-color);
+                background-color: var(--selected-color);
+                border-radius: 8px;
+            }
+            .submit {
+                font:
+                    14px Lucida Console,
+                    monospace;
+                border: 2px solid var(--accent-color);
+                border-radius: 5px;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: var(--selected-color);
+                transition: 0.1s all;
+            }
+            .submit:hover {
+		filter: brightness(110%);
+                transform: scale(1.1);
+                transition: 0.2s all;
+            }
+            .submit:active {
+                transform: scale(1.2, 0.8) translate(0, 10%);
+                transition: 0.1s all;
+            }
+            .offsetthingy {
+                margin-top: 0px;
+                margin-bottom: 4px;
+            }
+            .err {
+                color: var(--error-color) 
+            }
+            input::placeholder {
+                font-style: italic;
+            }
+            input {
+                margin: 10px;
+            }
+            input[name="x"] {
+                border: 1px solid;
+                border-radius: 2px;
+                padding: 2px;
+                padding-left: 5px;
+            }
+            table {
+                border-collapse: collapse;
+                background-color: #aabbaa;
+                border: 2px solid;
+            }
+            table#resultTable {
+                width: 50%;
+            }
+            th,
+            td {
+                border: 2px solid;
+                padding: 5px 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <canvas id="headerCanvas"></canvas>
+            <p class="offsetthingy">Вариант 22615</p>
+            <p class="offsetthingy">Author: Бондаренко Данил Сергеевич, P3217</p>
+        </div>
+        <div class="main">
+		<div class="shapeGraph">
+                	<canvas class="graph" , id="graph"></canvas>
+                	<p id="estimationText">Coolest text ever I think</p>
+			<button id="startMCButton">Start Monte-Carlo</button>
+        	</div>
+		<div>
+            <form id="form" autocomplete="off" action="index.html">
+                <p>
+                    <label>Координата X $ </label>
+                    <input
+                        type="text"
+                        id="xTextField"
+                        name="x"
+                        placeholder="Число в (-5.0 ; 3.0)"
+                        required="True"
+			maxlength="17"
+                    />
+                </p>
+                <p id="ys" class="buttonSpace">
+                    <label>Координата Y:</label>
+                </p>
+                <p id="rs" class="buttonSpace">
+                    <label>Радиус R:</label>
+                </p>
+                <input type="submit" class="submit" value="Отправить" />
+            </form>
+            <p class="err" id="errorMessage" hidden>hi</p>
+
+            <table id="resultTable">
+                <tr>
+                    <th colspan="5">Результаты проверок</th>
+                </tr>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Попадание</th>
+                    <th>Дата</th>
+                </tr>
+            </table>
+	    </div>
+        </div>
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
+
+

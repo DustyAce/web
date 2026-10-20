@@ -1,0 +1,58 @@
+ 
+<html>
+        <header>
+                <link href="default.css" rel="stylesheet" type="text/css">
+                <title>dusty_homepage</title>
+        </header>
+        <body>
+                <div class="console">
+                        <p class="system">$ cat greeting.md</p>
+                        <p>hi! </p>
+                        <p>you found my homepage</p>
+                        <p>here I mess around from time to time aswell as keep links to my web labs for quick access</p>
+                </div>
+		<div>
+                <div class=console id="lefthalf"> 
+                        <p class="system">$ ls -R web</p>
+                        <p> web/labs: </p>
+                        <a href="web1/index.html">web1</a>
+                        <p> web/TODO: <br> </p>
+                        <a href="web2/index.html" class="todo">web2</a>
+                        <a href="web2/index.html" class="todo">web3</a>
+                        <a href="web2/index.html" class="todo">web4</a>
+                </div>
+                <div class=console id="righthalf"> 
+                        <p class="system">$ ls -R useful_links</p>
+                        <p> useful_links/google_sheets: </p>
+                        <a href="https://docs.google.com/spreadsheets/d/1WvS1ad9J6jXNwSxTRnQs4yGgUBlwFzopUXUiYbGCZMw/edit?gid=580192402#gid=580192402">CSA</a>
+                        <a href="https://docs.google.com/spreadsheets/d/1A2XNYpN1Q1rr5-mpkAk5g0BP4NDY-cwRWtBudLz6Xis/edit?gid=878479207#gid=878479207">Web</a>
+                        <p> useful_links/etc: </p>
+                        <a href="https://gitlab.se.ifmo.ru/computer-systems/csa-rolling">CSA gitlab</a>
+                        <a href="https://github.com/ryukzak/wrench/" >wrench</a>
+                        <a href="https://slap-2026-2.edu.swampbuds.me/">slap</a>
+                        <a href="https://gitlab.se.ifmo.ru/programming-languages/cse-programming-languages-fall-2026" >programming_langs_gitlab</a>
+                        <a href="https://study.physics.itmo.ru/enrol/index.php?id=378" >physics</a>
+                        <a href="https://lms.tuxedo.se.ifmo.ru/newdex/program/0/courses/12/structure/chapters/88/modules/131/lessons/184">web</a>
+			<!-- <a href="" class="todo">web4</a> -->
+                </div>
+		</div>
+                <div>
+                        <div class=console id="miki">
+                                <p class="system">miki.jpg</p>
+                                <img src="miki.jpg" width="200">
+                        </div>
+                        <div class=console> 
+                                <p class=system id="randomTipTitle">$ echo tip$(($RANDOM % 10)).txt </p> 
+                                <p>tip of this session:</p>
+                                <p id="randomTipText"></p>
+                        </div>
+                </div>
+                <script src="randomtip.js"></script>
+		<footer>
+		<a href="https://t.me/JustAceGuy">telegram</a>
+		<a href="https://github.com/DustyAce">github</a>
+		<a href="https://gitlab.se.ifmo.ru/dusty">gitlab</a>
+		</footer>
+        </body>
+</html>
+

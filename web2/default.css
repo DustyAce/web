@@ -1,0 +1,157 @@
+:root {
+    --major-background: #110011;
+    --minor-background: #FFFFFF20;
+    --accent-color:       #DD00FF;
+    --subaccent-color:      #FF00AA;
+    --neutral-color:	#FFDDFF;
+    --bleak-color: 	#FF88EE;
+    --inactive-color:      #993355;
+    --error-color: 	#BB0000;
+}
+
+html, body {
+	height: 100%;
+	font: 16px Lucida Console, monospace;
+	color: var(--neutral-color);
+	background-color: var(--major-background);
+	white-space: normal;
+}
+
+header {
+	background-color: var(--minor-background);
+	font: 20px Lucida Console, monospace;
+	padding: 0.5em;
+	padding-left: 1em;
+	margin-top: 1em;
+	border-left: 0.3em solid;
+}
+
+p.console {
+	text-align: left;
+	margin: 0px;
+	margin-left: -0.5em;
+	font: 16px Lucida Console, monospace;
+	font-weight: none;
+	color: #FFFFFF50;
+}
+
+.main {
+	margin: 0.5em;
+	padding: 1em;
+	min-height: 95vh;
+}
+
+.main div {
+	padding: 0.5em;
+	margin: 0.5em;
+	float: left;
+	width: 50%;
+	background-color: var(--minor-background);
+	border-radius: 4px;
+	border: solid var(--minor-background) 4px;
+}
+
+form > p{
+	padding-left: 1em;
+}
+
+form .console {
+	padding-left: 0em;
+}
+
+div.shapeGraph {
+	float: right;
+	background-color: var(--minor-background);
+	border-radius: 4px;
+	border: solid var(--minor-background) 4px;
+	padding: 0.5em;
+	max-width: 40%;
+	min-width: 30em;
+	word-break: normal;
+}
+
+canvas.graph {
+	background-color: var(--major-background);
+	align: center;
+	margin: 1em;
+	width: 30em;
+	height: 30em;
+	max-width: 95%;
+	max-height: 95%;
+	border: 3px solid var(--minor-background);
+	border-radius: 2px;
+}
+
+button {
+	font-size: 110%;
+	margin-left: 6px;
+	border-width: 0px;
+	border-color: var(--accent-color);
+	background-color: var(--accent-color);
+	color: black;
+
+}
+
+.main p {
+	margin: 0px;
+}
+
+a {
+	color: var(--subaccent-color);
+	user-select: none;
+}
+
+a:hover, input[type="submit"]:hover {
+	cursor: pointer;
+	color: var(--bleak-color);
+	text-decoration-line: underline;
+	text-decoration-thickness: 0.1em;
+	transition: 0.2s all;
+}
+
+.err {
+	color: var(--error-color);
+}
+
+table {
+	border-collapse: collapse;
+	background-color: var(--minor-background);
+	border: 2px solid;
+	margin-top: 1em;
+	width: 100%;
+}
+
+th, td {
+	border: 2px var(--major-background) solid;
+	padding: 0.5em;
+	text-align: center;
+	min-width: 1em;
+}
+
+input[type="submit"] {
+	color: var(--subaccent-color);
+	background-color: transparent;
+	border: none;
+	font: inherit;
+	margin-top: 0.5em;
+	margin-left: 0.5em;
+}
+
+input[type="text"] {
+	user-select: none;
+	background-color: transparent;
+	color: var(--bleak-color);
+	font: 16px Lucida Console, monospace;
+	margin-left: 0em;
+	padding: 0.3em;
+	padding-left: 0.5em;
+	border: 0px;
+	outline: none;
+}
+
+footer {
+	position: fixed;
+	right: 1em;
+	bottom: 0.5em;
+}
+
