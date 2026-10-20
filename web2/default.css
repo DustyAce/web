@@ -66,17 +66,15 @@ div.shapeGraph {
 	border: solid var(--minor-background) 4px;
 	padding: 0.5em;
 	max-width: 40%;
-	min-width: 30em;
+	min-width: 20em;
 	word-break: normal;
 }
 
 canvas.graph {
 	background-color: var(--major-background);
 	align: center;
-	margin: 1em;
-	width: 30em;
-	height: 30em;
 	max-width: 95%;
+	margin-left: 0.5em;
 	max-height: 95%;
 	border: 3px solid var(--minor-background);
 	border-radius: 2px;
