@@ -113,8 +113,9 @@ function arrToButtons(arr, name) {
 
 function updateValue(e) {
 	let validator = validators.get(e.target.name);
-	if (validator.validateValueOnly(e.target.value)) {
-		selectedValuesMap.set(e.target.name, e.target.value);
+	let targetVal = parseFloat(e.target.value)
+	if (validator.validateValueOnly(targetVal)) {
+		selectedValuesMap.set(e.target.name, targetVal);
 	} else {
 		selectedValuesMap.set(e.target.name, null);
 	}
@@ -135,8 +136,8 @@ function validateValues(x, y, r) {
 
 function submitValues() {
 	let x = parseFloat(selectedValuesMap.get("x"));
-	let y = parseInt(selectedValuesMap.get("y"));
-	let r = parseInt(selectedValuesMap.get("r"));
+	let y = parseFloat(selectedValuesMap.get("y"));
+	let r = parseFloat(selectedValuesMap.get("r"));
 	let timestamp = new Date();
 	if (validateValues(x, y, r)) {
 		let isHit = checkHit(x, y, r);
