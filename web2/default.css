@@ -97,13 +97,13 @@ button {
 a {
 	color: var(--subaccent-color);
 	user-select: none;
+	text-decoration-line: underline;
+	text-decoration-thickness: 0.1em;
 }
 
 a:hover, input[type="submit"]:hover {
 	cursor: pointer;
 	color: var(--bleak-color);
-	text-decoration-line: underline;
-	text-decoration-thickness: 0.1em;
 	transition: 0.2s all;
 }
 
@@ -133,6 +133,8 @@ input[type="submit"] {
 	font: inherit;
 	margin-top: 0.5em;
 	margin-left: 0.5em;
+	text-decoration-line: underline;
+	text-decoration-thickness: 0.1em;
 }
 
 input[type="text"] {
