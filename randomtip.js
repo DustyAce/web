@@ -17,7 +17,7 @@ tips = [
         "add your public SSH key to Helios, github and gitlab, make your life easier"
 ];
 
-randomTipTitle.innerText = "$ echo tip$(($RANDOM % "+ tips.length +")).txt "
+randomTipTitle.innerText = "$ cat tip$(($RANDOM % "+ tips.length +")).txt "
 
 tipBox.innerText = tips[Math.floor(tips.length*Math.random())];
 
